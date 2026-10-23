@@ -7,5 +7,16 @@
     "name": "assistant-kit contributors"
   },
   "license": "MIT",
-  "keywords": ["personal-assistant", "productivity", "students", "skills", "briefing", "inbox", "tasks", "calendar"]
+  "keywords": [
+    "personal-assistant",
+    "productivity",
+    "students",
+    "skills",
+    "briefing",
+    "inbox",
+    "tasks",
+    "calendar"
+  ],
+  "homepage": "https://github.com/YYN192/assistant-kit",
+  "repository": "https://github.com/YYN192/assistant-kit"
 }

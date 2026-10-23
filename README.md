@@ -72,7 +72,7 @@ personal skill stays.
 ## Install: Claude Code
 
 ```bash
-claude plugin marketplace add <owner>/assistant-kit
+claude plugin marketplace add YYN192/assistant-kit
 ```
 
 ```bash
@@ -82,7 +82,7 @@ claude plugin install assistant-kit@assistant-kit
 Then start Claude Code in your home folder (or anywhere) and paste prompt 1 from
 [`PROMPTS.md`](PROMPTS.md), or type `/assistant-kit:kit-setup`.
 
-Inside a session you can do the same with `/plugin marketplace add <owner>/assistant-kit`
+Inside a session you can do the same with `/plugin marketplace add YYN192/assistant-kit`
 and `/plugin install assistant-kit@assistant-kit`. To try it without installing, clone the
 repo and run `claude --plugin-dir ./assistant-kit`.
 
