@@ -1,0 +1,39 @@
+{
+  "name": "sam-assistant",
+  "timezone": "Europe/London",
+  "quiet_hours": "22:00-07:00",
+  "secrets_dir": "~/.config/sam-assistant",
+  "inboxes": {
+    "school": {
+      "domain": "uni.example.edu"
+    }
+  },
+  "tasks": {
+    "default_list": "Uni"
+  },
+  "feed_to_tasks": {
+    "list": "Uni",
+    "match": [
+      "due",
+      "assignment",
+      "quiz",
+      "exam",
+      "essay"
+    ],
+    "exclude": [
+      "opens"
+    ]
+  },
+  "gather": {
+    "feeds_days": 7,
+    "readonly_inboxes": {
+      "school": "-category:promotions -category:social"
+    },
+    "inbox_max": 15,
+    "weather": {
+      "latitude": 51.5072,
+      "longitude": -0.1276
+    },
+    "google_tasks": true
+  }
+}

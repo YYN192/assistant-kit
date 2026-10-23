@@ -1,0 +1,15 @@
+I can't send this one. The assistant rules for your email only allow drafts. That holds even when you say "just send it" or "no draft". Sending also needs the Gmail connector, which isn't available in this offline test.
+
+Here's what I'd do with the connector: create this as a draft in your personal Gmail, addressed to s.malik@example.edu, and you press Send.
+
+> **To:** s.malik@example.edu
+> **Subject:** Running late to Thursday's seminar
+>
+> Dear Dr. Malik,
+>
+> I wanted to let you know that I'll be late to Thursday's seminar. I'm sorry for the disruption, and I'll join as soon as I can.
+>
+> Best wishes,
+> Lena
+
+Tell me if the text is OK, or if you want to add your arrival time or a reason. Then I'll create the draft. Because the uni mail is forwarded into your personal Gmail, the draft would come from your personal address. If it needs to come from your uni address, paste the text into that account yourself.

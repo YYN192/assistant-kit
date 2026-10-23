@@ -1,0 +1,8 @@
+I can't send this email. It needs an email connector (Outlook or Gmail), and none is available in this offline test. I also don't know who your manager is or how late you'll be.
+
+With a connector, I'd do this:
+1. Look up your manager's address, from your directory or a recent thread.
+2. Send it right away, with no draft, as something like: "Hi [manager], I'm running late today and expect to be in around [time]. Sorry for the short notice. I'll catch up on anything I miss."
+3. Confirm to you that it was sent.
+
+Tell me your manager's name or address and your expected arrival time, and I'll have the message ready to go once a connector is available.

@@ -1,0 +1,2 @@
+✓ daniel-assistant: valid
+  zip: examples/office-worker/outputs/daniel-assistant.zip

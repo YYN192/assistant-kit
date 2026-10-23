@@ -1,0 +1,11 @@
+{
+  "name": "assistant-kit",
+  "displayName": "Assistant Kit",
+  "version": "0.1.0",
+  "description": "Setup skills that interview you, plan connectors, and build a personal assistant made for you: morning briefing, inbox triage, task capture, weekly planning and reminders. The setup skills remove themselves when your assistant is ready.",
+  "author": {
+    "name": "assistant-kit contributors"
+  },
+  "license": "MIT",
+  "keywords": ["personal-assistant", "productivity", "students", "skills", "briefing", "inbox", "tasks", "calendar"]
+}

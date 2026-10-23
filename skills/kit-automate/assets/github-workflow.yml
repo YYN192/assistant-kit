@@ -1,0 +1,45 @@
+# Template: cloud sync without AI, twice a day. PRIVATE repository only.
+# Save as <home>/.github/workflows/sync.yml. The person adds the secrets in the repo's
+# Settings → Secrets and variables → Actions:
+#   GOOGLE_OAUTH_CLIENT   contents of google-oauth-client.json
+#   GOOGLE_TASKS_TOKEN    contents of google-tasks-token.json
+#   FEEDS_JSON            contents of feeds.json  ({"canvas": "https://…"})
+#   NOTIFY_JSON           contents of notify.json (optional)
+# Nothing here prints a secret. Remove steps you don't use.
+name: sync
+on:
+  schedule:
+    - cron: "5 5,16 * * *"   # UTC; adjust for the person's time zone
+  workflow_dispatch: {}
+permissions:
+  contents: read
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      ASSISTANT_SECRETS: ${{ runner.temp }}/secrets
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - name: Write secrets to a temp folder
+        env:
+          GOOGLE_OAUTH_CLIENT: ${{ secrets.GOOGLE_OAUTH_CLIENT }}
+          GOOGLE_TASKS_TOKEN: ${{ secrets.GOOGLE_TASKS_TOKEN }}
+          FEEDS_JSON: ${{ secrets.FEEDS_JSON }}
+          NOTIFY_JSON: ${{ secrets.NOTIFY_JSON }}
+        run: |
+          umask 077
+          mkdir -p "$ASSISTANT_SECRETS"
+          printf '%s' "$GOOGLE_OAUTH_CLIENT" > "$ASSISTANT_SECRETS/google-oauth-client.json"
+          printf '%s' "$GOOGLE_TASKS_TOKEN" > "$ASSISTANT_SECRETS/google-tasks-token.json"
+          printf '%s' "$FEEDS_JSON" > "$ASSISTANT_SECRETS/feeds.json"
+          if [ -n "$NOTIFY_JSON" ]; then printf '%s' "$NOTIFY_JSON" > "$ASSISTANT_SECRETS/notify.json"; fi
+      - name: Feed deadlines → Google Tasks
+        run: python scripts/feed_to_tasks.py sync
+      - name: Alert on failure
+        if: failure()
+        run: python scripts/notify.py alert "cloud sync failed: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"

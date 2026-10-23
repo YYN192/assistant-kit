@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!-- Template. Replace HUB, JOB, HOME_DIR (absolute, no ~), the command and the times.
+     Save as ~/Library/LaunchAgents/com.HUB.JOB.plist, then:
+       launchctl bootstrap gui/$(id -u) ~/Library/LaunchAgents/com.HUB.JOB.plist
+       launchctl kickstart -k gui/$(id -u)/com.HUB.JOB      (test run now) -->
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>com.HUB.JOB</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>HOME_DIR/scripts/run_job.sh</string>
+    <string>HUB-JOB</string>
+    <string>HOME_DIR/.venv/bin/python</string>
+    <string>HOME_DIR/scripts/feed_to_tasks.py</string>
+    <string>sync</string>
+  </array>
+  <key>StartCalendarInterval</key>
+  <array>
+    <dict><key>Hour</key><integer>7</integer><key>Minute</key><integer>5</integer></dict>
+    <dict><key>Hour</key><integer>18</integer><key>Minute</key><integer>5</integer></dict>
+  </array>
+  <key>WorkingDirectory</key>
+  <string>HOME_DIR</string>
+  <key>RunAtLoad</key>
+  <false/>
+</dict>
+</plist>

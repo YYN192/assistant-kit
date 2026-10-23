@@ -1,0 +1,17 @@
+# Run 1: tests/skill_smoke.sh (symlinked skill). The skill loaded, but Read on SYSTEM.md and workflows/ was denied (symlink target outside the throwaway project), so answers came from SKILL.md only.
+# Prompt: Plan a 2-hour study block for my thesis on Sunday afternoon.
+
+I can't plan that block. Two of the assistant's rules rule it out, and I couldn't read `SYSTEM.md` to check for exceptions.
+
+- **Sunday is protected time.** The rules say never plan anything into Sunday, so a thesis block that afternoon is off the table.
+- **Calendar blocks only happen during the weekly review.** Outside that, I can't put time on the calendar.
+- **`SYSTEM.md` is blocked.** It sits behind a symlink outside my allowed directories, so I couldn't read the calendars, task lists or time rules. I haven't tried to get around that.
+
+Here are two options:
+1. **Move the block to Saturday.** Today is Thu 22 Oct, so I could plan a 2-hour thesis block for Sat 24 Oct. It would fit the 2.5 h/day study cap and end before 21:30. I'd run the weekly-review workflow, show you a table and wait for your OK before creating anything.
+2. **Keep it on Sunday.** If you want that, you'd be overriding your own protected-time rule, so tell me explicitly. I'd still only put it in a table for your approval, not on the calendar.
+
+I'd also need read access to the `SYSTEM.md` folder (`<repo>/examples/intern/home/skill/priya-assistant/`) to check your calendar for conflicts.
+
+Which option do you want?
+exit 0

@@ -1,0 +1,19 @@
+I couldn't read `SYSTEM.md` or `workflows/help.md`. Both are symlinks to a folder outside my allowed directories, and read access wasn't granted. The summary below comes only from the skill's main file, so it may be missing details from those two files.
+
+**What I can do as Daniel's work assistant**
+- **Daily briefing** ("brief me", "what's today"): a rundown of your day. It also runs as the weekday 08:30 scheduled task.
+- **Work tracking** ("stand-up", "what's on my plate", "status of ANL-…", "prep my 11:00", "Friday update"): Jira ANL and meeting prep.
+- **Calendar blocking** ("find 2 hours for …", "block focus time", "remind me …", "move my focus block"): I propose the blocks in a table and wait for your OK.
+- **Tune-up** ("tune-up", "this isn't working"): a review of how the assistant is working for you.
+- **Help** ("what can you do?", "help").
+
+**Limits**
+- **Email:** drafts only. I never send, forward or answer invites. I put the draft text in the chat for you to copy into Outlook.
+- **Read-only by default:** Jira stays read-only until you say "post it". Slack writes are DMs to you only, never a channel.
+- **Protected time:** I don't plan into weekdays after 18:30, weekends, lunch 14:00–15:00, or any Wednesday meeting slot.
+- **Confidential:** Jira issues labelled "confidential" never appear. I only give a count.
+- **Other rules:** I ask before deleting, pushing, publishing or installing. I never handle passwords, codes or tokens.
+
+**Offline test:** no connectors are available here. A real briefing or stand-up would need Outlook calendar, Jira (ANL) and Slack. For now I can only describe what I'd do.
+
+If you grant read access to that folder, I can read `SYSTEM.md` and `workflows/help.md` and give you the full version.

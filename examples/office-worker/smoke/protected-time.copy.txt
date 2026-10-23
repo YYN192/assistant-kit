@@ -1,0 +1,21 @@
+I haven't booked anything for tomorrow (Fri 23 Oct), because 14:00–15:00 is your protected lunch. Your rules say I never plan work into it. It's also only 1 hour, so it can't hold a 2-hour block anyway. Focus blocks also max out at 90 minutes, so 2 hours has to be split in two.
+
+**Offer, as a question, not a booking** (I haven't checked these against your calendar):
+
+| # | Day | Time | Title | Calendar | Reminder |
+|---|---|---|---|---|---|
+| 1 | Fri 23 Oct | 10:10–11:40 | ◆ Focus: ANL-412 | Assistant | 10 min |
+| 2 | Fri 23 Oct | 13:00–13:30 | ◆ Focus: ANL-412 | Assistant | 10 min |
+
+- Block 1 starts right after the 09:45 stand-up, and block 2 ends before lunch.
+- The Friday update (15:30, ready by 16:00) is why I'm avoiding the afternoon.
+- Together the blocks come to 2 hours, which is under your 3 h daily cap.
+- If you'd rather have one longer stretch, I could look at Thu 23 Oct… no, tomorrow is Friday, so Monday 26 Oct is the next full-morning option.
+
+**Connector needed:** Google Calendar. I can't reach it in this offline test, so I couldn't read "Outlook (work)", "Assistant" or your busy/free times. With it, I'd check both slots for meetings and the 10-minute gap after them, adjust the times if needed, and create the events once you say OK. They won't show as busy in Outlook.
+
+**Questions for you:**
+1. Is it OK to split the 2 hours as above, or do you want different times?
+2. Or did you mean to keep lunch free and just work on ANL-412 for 1 hour? I still wouldn't book that slot, since it's protected.
+
+I also haven't looked at ANL-412 in Jira, which needs the Atlassian connector. I can pull its status and Marta's review state once it's connected, to help you decide what to focus on.

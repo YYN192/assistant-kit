@@ -1,0 +1,15 @@
+stage2 | Customize → Connectors (person) | Microsoft 365 connect attempt | person did it themselves: "I get a message saying the app needs administrator approval"
+stage2 | Google Calendar (person, web UI) | subscribe Outlook ICS as 'Outlook (work)'; create calendar 'Assistant' | person did it themselves after steps: "I also created the 'Assistant' calendar"
+stage2 | Customize → Connectors (person) | connect Atlassian (northwind-example) and Slack | person did it themselves: "It says connected, with no error"
+stage5 | Customize → Skills → Upload a skill (person) | daniel-assistant.zip | person did it: "I uploaded the skill and it's switched on."
+stage5 | Cowork Scheduled → New task (person) | daniel-assistant-briefing, Weekdays 08:30, prompt per scheduled-tasks.md §1 | shown settings, person created it: "I also created both scheduled tasks with the names, times and prompts you gave me."
+stage5 | Cowork Scheduled → New task (person) | daniel-assistant-friday-update, Weekly Friday 15:30, prompt per scheduled-tasks.md §2 | same: "It now reads \"Weekly, Friday, 15:30\"."
+stage6 | Google Calendar connector: create_event | calendar "Assistant", "TEST – assistant setup (delete me)", 2026-10-22 17:00–17:15 Europe/Madrid | yes: "Yes to both, go ahead."
+stage6 | Google Calendar connector: list_events (read-back) | calendar "Assistant", 2026-10-22 | n/a (read)
+stage6 | Slack connector: send message (DM to self) | to Daniel's own user, text "TEST – assistant setup (delete me)" | yes: "Yes to both, go ahead."
+stage6 | Customize → Skills (person) | re-upload daniel-assistant.zip (description fix) | person: "I'll re-upload the zip now"
+stage6 | Cowork Scheduled → Run now (person) | daniel-assistant-briefing | person: "The briefing task finished with no errors… The Slack DM with the briefing arrived."
+stage6 | Cowork Scheduled → Run now (person) | daniel-assistant-friday-update | person: "The Friday update task also finished… It also sent me a DM"
+stage6 | Google Calendar connector: delete_event | calendar "Assistant", the one event "TEST – assistant setup (delete me)" 2026-10-22 17:00 (created by the assistant) | yes: "Yes, please delete the test event and the test DM. Just those two, nothing else."
+stage6 | Slack connector: delete message | the one test DM "TEST – assistant setup (delete me)" sent by the assistant to Daniel | yes: same quote
+stage7 | Customize → Skills → Delete (person) | kit-setup, kit-interview, kit-connectors, kit-generate, kit-automate | steps given; person did it: "I turned off and deleted the five kit skills … and left daniel-assistant untouched."

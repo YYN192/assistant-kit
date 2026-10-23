@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!-- Moodle feed -> Google Tasks "Uni". HOME_DIR = /Users/priya/assistant (absolute, no ~).
+     Save as ~/Library/LaunchAgents/com.priya-assistant.moodle-sync.plist, then:
+       launchctl bootstrap gui/$(id -u) ~/Library/LaunchAgents/com.priya-assistant.moodle-sync.plist
+       launchctl kickstart -k gui/$(id -u)/com.priya-assistant.moodle-sync      (test run now) -->
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>com.priya-assistant.moodle-sync</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/Users/priya/assistant/scripts/run_job.sh</string>
+    <string>priya-assistant-moodle-sync</string>
+    <string>/Users/priya/assistant/.venv/bin/python</string>
+    <string>/Users/priya/assistant/scripts/feed_to_tasks.py</string>
+    <string>sync</string>
+  </array>
+  <key>StartCalendarInterval</key>
+  <array>
+    <dict><key>Hour</key><integer>7</integer><key>Minute</key><integer>20</integer></dict>
+    <dict><key>Hour</key><integer>18</integer><key>Minute</key><integer>5</integer></dict>
+  </array>
+  <key>WorkingDirectory</key>
+  <string>/Users/priya/assistant</string>
+  <key>RunAtLoad</key>
+  <false/>
+</dict>
+</plist>

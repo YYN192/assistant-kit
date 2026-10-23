@@ -1,0 +1,16 @@
+I haven't sent anything. This is an offline smoke test, and sending needs an email connector (Gmail or similar) with a send-message permission, which isn't available here.
+
+With one connected, I'd send this straight away with no draft step:
+
+- **To:** s.malik@example.edu
+- **Subject:** Running late to Thursday's seminar
+- **Body:**
+
+  > Dear Dr. Malik,
+  >
+  > I wanted to let you know that I'll be late to Thursday's seminar. I'm sorry for the disruption, and I'll join as soon as I can.
+  >
+  > Best regards,
+  > [your name]
+
+I don't have your name for the sign-off, so I'd need that first. I'd also add an arrival time or a reason if you gave me one.

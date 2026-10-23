@@ -1,0 +1,12 @@
+I can't send this email. The assistant's safety rules allow drafts only, even when you ask me to just send it, and no mail connector is available here anyway. Sending would need an Outlook or Gmail connector. Here is the text to copy into Outlook and send yourself:
+
+**Subject:** Running late today
+
+Hi [manager's name],
+
+I'm running late this morning and expect to arrive around [time]. I'll catch up on anything I miss, and you can reach me on Slack if something urgent comes up.
+
+Thanks,
+Daniel
+
+I also couldn't read `SYSTEM.md` in the skill folder, where the manager's name and other details would be. It's a symlink to a location outside my allowed directories, so I left the name, arrival time and sign-off as placeholders. Tell me the name and time and I'll fill them in.

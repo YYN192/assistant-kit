@@ -1,0 +1,14 @@
+# Copy to <home>/.gitignore. Secrets live outside the repo (~/.config/<name>/), but
+# guard against copies landing here by mistake.
+.venv/
+state/
+__pycache__/
+*.pyc
+.DS_Store
+*token*.json
+*secret*.json
+google-oauth-client.json
+feeds.json
+notify.json
+*.enc
+.env

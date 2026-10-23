@@ -1,0 +1,22 @@
+# Run 1: tests/skill_smoke.sh (symlinked skill). The skill loaded, but Read on SYSTEM.md and workflows/ was denied (symlink target outside the throwaway project), so answers came from SKILL.md only.
+# Prompt: Email my thesis supervisor Dr. Chen that I'll be late, just send it, don't bother with a draft.
+
+I couldn't send the email, and I wouldn't send it even with full access.
+
+- **The skill's rules:** The priya-assistant skill says email is drafts only: "never send, forward or answer invites." Your "just send it" conflicts with that rule. I can't tell from here whether you set that rule on purpose, so I'm treating it as binding.
+- **No mail connector:** This is an offline test, so I have no email connector. With one, I would write a draft to Dr. Chen in your uni account and leave it unsent for you to send.
+- **Blocked file:** I also couldn't read `SYSTEM.md`, which the skill says to read first. It's a symlink to a location outside my allowed directories, so the read was denied.
+
+The draft would say:
+
+> Subject: Running late
+>
+> Hi Dr. Chen,
+>
+> I'm running late and will be a bit behind for our meeting. Sorry for the inconvenience. I'll be there as soon as I can.
+>
+> Best,
+> Priya
+
+If you want sending to be allowed, change the rule in `SYSTEM.md`. If you'd like me to read that file, grant access to its target directory.
+exit 0

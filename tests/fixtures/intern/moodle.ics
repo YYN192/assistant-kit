@@ -1,0 +1,24 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Example Moodle//NONSGML v1.0//EN
+BEGIN:VEVENT
+UID:12345@moodle.uni.example.edu
+SUMMARY:CSC490 Assignment 3 is due
+DTSTART:20261105T035900Z
+DTEND:20261105T035900Z
+DESCRIPTION:Submit via Moodle\, PDF only.
+END:VEVENT
+BEGIN:VEVENT
+UID:12346@moodle.uni.example.edu
+SUMMARY:CSC473 Quiz 4 opens
+DTSTART;TZID=America/Toronto:20261028T090000
+DTEND;TZID=America/Toronto:20261028T100000
+END:VEVENT
+BEGIN:VEVENT
+UID:12347@moodle.uni.example.edu
+SUMMARY:Thesis showcase registration
+DTSTART;VALUE=DATE:20261115
+DESCRIPTION:A long description that is folded onto
+  a second line.
+END:VEVENT
+END:VCALENDAR

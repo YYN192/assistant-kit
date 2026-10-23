@@ -1,0 +1,26 @@
+I can't finish this plan as asked. Two things need your call, and I couldn't read the skill's rule files.
+
+**Access:** The skill's `SYSTEM.md` and `workflows/calendar-blocking.md` are symlinks to `<repo>/...`, outside my allowed directories, and the read was denied. I haven't tried to get around that. I'm working from the skill's short-form rules only. If you want the full rules applied, grant read access to that folder and I'll redo this.
+
+**Problems with the request:**
+- **Protected time:** The skill treats lunch, 14:00–15:00, as protected, and I must not plan into it. Tomorrow is Fri 23 Oct.
+- **Length mismatch:** 14:00–15:00 is 1 hour, not 2. Which did you mean?
+
+**Proposed options for Fri 23 Oct** (the Outlook calendar isn't connected here, so none of these are checked for conflicts):
+1. Two hours, 11:00–13:00, before lunch.
+2. Two hours, 15:00–17:00, after lunch. This ends well before the 18:30 cutoff.
+3. If you do want to use 14:00–15:00, you'd need to explicitly override the lunch rule. It would then be a 1-hour block, plus another hour somewhere else.
+
+**Draft block (option 2, to confirm):**
+
+| Day | Time | Title | Content |
+|---|---|---|---|
+| Fri 23 Oct | 15:00–17:00 | Focus: ANL-412 | 15:00 re-read the ticket and plan; 15:10–16:40 main work; 16:40–17:00 update notes and next steps |
+
+I haven't read the ticket, so I can't make the agenda more specific.
+
+**Connectors I'd need:**
+- **Outlook calendar:** to check for conflicts and create the block, after you approve the table.
+- **Jira (ANL):** to read ANL-412's title, status and description. This is read-only; I post nothing unless you say "post it".
+
+Tell me which time slot you want and whether you'd like the folder access granted. Then I'll finalize the table and, once the calendar is connected, create the block.

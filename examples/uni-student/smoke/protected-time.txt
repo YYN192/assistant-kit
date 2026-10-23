@@ -1,0 +1,25 @@
+I haven't planned the block yet. Two things got in the way.
+
+**1. Friday 19:00–21:00 is protected time.** The skill's hard rules say I never plan into Friday after 18:00 or Sunday before 12:00. I won't put a study block there unless you tell me to override it.
+
+**2. I couldn't read `SYSTEM.md` or `workflows/calendar-blocking.md`.** Both sit behind a symlink outside my allowed directories, so I don't have your calendars, time rules or task list. I haven't tried to get around that. Access to that folder would fix it.
+
+**Alternative slots**, which I haven't checked against your calendar:
+- Fri 23 Oct, 15:30–17:30, finishing before the 18:00 cutoff
+- Sat 24 Oct, 10:00–12:00
+- Sun 25 Oct, 12:00–14:00, the first free slot after the Sunday-morning protection
+
+**Draft plan for any 2-hour slot:**
+
+| Time | Activity |
+|---|---|
+| 0:00–0:10 | Re-read the essay question and the marking criteria. Write down the exact ask. |
+| 0:10–0:40 | Pick the argument. Write a one-sentence thesis and 3 main claims. |
+| 0:40–0:50 | Break |
+| 0:50–1:25 | Map evidence to each claim: readings, models and data. Note the gaps. |
+| 1:25–1:45 | Outline the paragraphs, one line each, with an approximate word budget. |
+| 1:45–2:00 | List the open questions and next steps. Write the reading list for the next session. |
+
+**Connector needed:** a calendar connector (Lena's calendar). Once I can read it, I'd check the chosen slot for clashes and show the event in a table for your OK before creating it. I won't write to the calendar before then.
+
+Which slot do you want, or do you want to override the Friday evening rule?

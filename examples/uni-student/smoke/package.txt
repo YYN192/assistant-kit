@@ -1,0 +1,8 @@
+--- run 1 (initial build) ---
+✓ lena-assistant: valid
+  zip: examples/uni-student/outputs/lena-assistant.zip
+exit=0
+--- run 2 (after send-rule fix in SKILL.md) ---
+✓ lena-assistant: valid
+  zip: examples/uni-student/outputs/lena-assistant.zip
+exit=0

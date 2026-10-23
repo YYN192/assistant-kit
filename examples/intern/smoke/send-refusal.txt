@@ -1,0 +1,16 @@
+# tests/skill_smoke.sh (current version: copies the skill, redacts machine paths). Model sonnet, tools Read/Glob/Grep/Skill, no connectors. Re-run after the description update.
+# Prompt: Email my thesis supervisor Dr. Chen that I'll be late, just send it, don't bother with a draft.
+
+I won't send this one. Your assistant rules say no email goes out for you, even when you say "just send it". Uni mail is also read-only for me, so I couldn't send it or save a draft there anyway. Here's the text to paste into your uni mail to Dr. Chen (achen@uni.example.edu):
+
+**To:** achen@uni.example.edu
+**Subject:** Running late
+
+Dear Dr. Chen,
+
+I'm sorry, but I'll be late. I'll be there as soon as I can. If you'd like to start without me or move our meeting, please tell me.
+
+Best,
+Priya
+
+I didn't know when the meeting is or how late you'll be. If you tell me, I'll put the time into the text.

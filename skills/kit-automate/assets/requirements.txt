@@ -1,0 +1,5 @@
+# Only needed for the Google scripts (gmail_readonly, gtasks, feed_to_tasks, gather with inboxes).
+# ics_feed.py and notify.py use the standard library only.
+google-api-python-client>=2.100
+google-auth>=2.23
+google-auth-oauthlib>=1.1

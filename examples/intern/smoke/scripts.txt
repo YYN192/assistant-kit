@@ -1,0 +1,71 @@
+# Real script checks (Claude Code persona: intern). Run 2026-10-22 21:08 (runner machine local time) from examples/intern/ paths in the repo.
+# ASSISTANT_SECRETS=<temp dir> (empty), no venv, no network sign-in.
+
+$ python3 home/scripts/ics_feed.py upcoming --file tests/fixtures/intern/moodle.ics --days 60
+2026-10-28   09:00  [tests/fixtures/intern/moodle.ics] CSC473 Quiz 4 opens
+2026-11-04   22:59  [tests/fixtures/intern/moodle.ics] CSC490 Assignment 3 is due
+2026-11-15 all-day  [tests/fixtures/intern/moodle.ics] Thesis showcase registration
+exit 0
+
+$ python3 home/scripts/ics_feed.py upcoming --file tests/fixtures/intern/moodle.ics --days 60 --json
+{"items": [{"kind": "event", "source": "tests/fixtures/intern/moodle.ics", "uid": "12346@moodle.uni.example.edu", "title": "CSC473 Quiz 4 opens", "when": "2026-10-28T09:00:00-04:00", "all_day": false, "date": "2026-10-28", "time": "09:00"}, {"kind": "event", "source": "tests/fixtures/intern/moodle.ics", "uid": "12345@moodle.uni.example.edu", "title": "CSC490 Assignment 3 is due", "when": "2026-11-04T22:59:00-05:00", "all_day": false, "description": "Submit via Moodle, PDF only.", "date": "2026-11-04", "time": "22:59"}, {"kind": "event", "source": "tests/fixtures/intern/moodle.ics", "uid": "12347@moodle.uni.example.edu", "title": "Thesis showcase registration", "when": "2026-11-15T00:00:00-05:00", "all_day": true, "description": "A long description that is folded onto a second line.", "date": "2026-11-15", "time": ""}], "errors": []}
+exit 0
+
+$ python3 home/scripts/ics_feed.py list   (no feeds saved in the temp secrets dir)
+No feeds. Add one with: ics_feed.py add <name>
+exit 0
+
+$ python3 home/scripts/feed_to_tasks.py sync --dry-run --file tests/fixtures/intern/moodle.ics --days 60
++ (dry run) {"title": "[tests/fixtures/intern/moodle.ics] CSC473 Quiz 4 opens", "due": "2026-10-28T00:00:00.000Z"}
++ (dry run) {"title": "[tests/fixtures/intern/moodle.ics] CSC490 Assignment 3 is due", "due": "2026-11-04T00:00:00.000Z"}
++ (dry run) {"title": "[tests/fixtures/intern/moodle.ics] Thesis showcase registration", "due": "2026-11-15T00:00:00.000Z"}
+exit 0
+
+$ python3 home/scripts/notify.py --dry-run test   (no channel configured)
+notify: no channel configured (run notify.py setup); nothing sent.
+exit 0
+
+$ printf '{"kind":"ntfy","topic":"dummy-topic-for-dry-run","server":"https://ntfy.sh"}' > $ASSISTANT_SECRETS/notify.json; notify.py --dry-run test
+[dry run → ntfy] 
+✅ test from your assistant
+exit 0
+
+$ echo "☀️ test briefing" | notify.py --dry-run post --title Briefing
+[dry run → ntfy] Briefing
+☀️ test briefing
+exit 0
+
+$ notify.py --dry-run alert "moodle-sync failed"
+[dry run → ntfy] 
+❗ moodle-sync failed
+exit 0
+
+$ python3 home/scripts/gmail_readonly.py check --account uni   (no token in temp secrets; no Google libs installed)
+Google libraries missing. Run: <home>/.venv/bin/pip install -r <home>/requirements.txt
+exit 1
+
+$ python3 home/scripts/gather.py   (no feeds, no token: errors reported, still valid JSON)
+{"generated": "2026-10-22T21:08+03:00", "errors": ["inbox uni: Google libraries missing. Run: <home>/.venv/bin/pip install -r <home>/requirements.txt", "inbox work: Google libraries missing. Run: <home>/.venv/bin/pip install -r <home>/requirements.txt"], "deadlines": [], "mail": {}}
+exit 0
+
+$ for s in home/scripts/*.py; do python3 $s --help >/dev/null; done
+ok  ics_feed.py --help
+ok  notify.py --help
+ok  gmail_readonly.py --help
+ok  gtasks.py --help
+ok  feed_to_tasks.py --help
+ok  gather.py --help
+
+$ bash -n home/scripts/run_job.sh
+exit 0
+
+$ plutil -lint home/automations/com.priya-assistant.moodle-sync.plist
+examples/intern/home/automations/com.priya-assistant.moodle-sync.plist: OK
+exit 0
+
+$ python3 -c "import json; json.load(open(\"home/assistant.json\"))"
+assistant.json: valid JSON
+exit 0
+
+# secrets dir after the run (file names only):
+notify.json

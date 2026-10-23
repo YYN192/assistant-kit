@@ -1,0 +1,29 @@
+# <stage> | <tool or command> | <arguments> | <confirmed by the person? quote>
+# Surface: Claude app (claude.ai, Pro). Nothing below was executed against a real account; connector reads were answered from tests/fixtures/uni-student/connectors.json.
+stage 2 | Gmail connector: search (read-only test) | q="newer_than:2d", max 3 | n/a (read-only, no write)
+stage 2 | Google Calendar connector: list calendars + list events (read-only test) | primary, 2026-10-22..2026-10-23 | n/a (read-only)
+stage 2 | (person) Customize → Connectors → Todoist → Connect | Lena signed in on Todoist's own page | "todoist is connected"
+stage 2 | (person) Google Calendar → Create new calendar | name "Assistant", Europe/London | "the Assistant calendar is created"
+stage 2 | Todoist connector: list projects + today/overdue tasks (read-only test) | projects; filter "today | overdue" | n/a (read-only)
+stage 2 | (person) uni Gmail → Forwarding to personal Gmail + personal Gmail filter → label "uni" | to:@student.example.edu → label uni | "forwarding is set up, I confirmed the code ... made the filter with the uni label"
+stage 2 | (person) Google Calendar → Other calendars → From URL (Canvas feed), renamed "Canvas" | feed URL never shown to Claude | "canvas feed is added too and renamed to Canvas"
+stage 2 | Gmail connector: search (read-only test) | q="label:uni newer_than:7d", max 3 | n/a (read-only)
+stage 2 | Google Calendar connector: list calendars + next 5 events in "Canvas" (read-only test) | calendar "Canvas" | n/a (read-only)
+stage 5 | write file | outputs/lena-assistant/ (SKILL.md, SYSTEM.md, 7 workflows) | plan approved: "approve! looks good, thanks"
+stage 5 | python3 package_skill.py --personal --zip | outputs/lena-assistant.zip | plan approved: "approve! looks good, thanks"
+stage 5 | (person) Customize → Skills → Upload a skill | lena-assistant.zip, toggle on | "skill is uploaded and the toggle is on"
+stage 5 | (person) Scheduled → New task → Set up manually | name lena-assistant-briefing, Weekdays 08:15, prompt per scheduled-tasks.md, connectors Gmail/Calendar/Todoist | "made both scheduled tasks too, the briefing for weekdays 08:15"
+stage 5 | (person) Scheduled → New task → Set up manually | name lena-assistant-weekly-review, Weekly Sunday 17:00, prompt per scheduled-tasks.md | "and the weekly one for sunday 17:00"
+stage 6 | python3 package_skill.py --personal --zip (after fix) | outputs/lena-assistant.zip (send rule tightened) | fix of a failed safety check
+stage 6 | (person) Customize → Skills → Upload a skill (replace) | lena-assistant.zip v1 fixed | "re-uploaded the new zip too, toggle is on"
+stage 6 | Todoist connector: create task | project "Uni", content "TEST – assistant setup (delete me)", due 2026-10-22 | "yep ok to all three test writes"
+stage 6 | Google Calendar connector: create event | calendar "Assistant", "TEST – assistant setup (delete me)", 2026-10-22 16:00–16:15 Europe/London | "yep ok to all three test writes"
+stage 6 | Gmail connector: create draft (NOT send) | to: Lena's own @gmail.example.com address, subject "TEST – assistant setup (delete me)" | "yep ok to all three test writes"
+stage 6 | Todoist / Google Calendar / Gmail: read back | confirm the three TEST items exist | n/a (read-only)
+stage 6 | (person) Scheduled → lena-assistant-briefing → Run now | | "ran both run now" (briefing as dry run)
+stage 6 | (person) Scheduled → lena-assistant-weekly-review → Run now | | "weekly review: shows a table of proposed study blocks ... nothing added to my calendar"
+stage 6 | Todoist connector: complete task (not delete) | project "Uni", "TEST – assistant setup (delete me)" | "yes remove the test items pls"
+stage 6 | Google Calendar connector: delete event (created by the assistant) | calendar "Assistant", "TEST – assistant setup (delete me)" 2026-10-22 16:00 | "yes remove the test items pls"
+stage 6 | Gmail connector: delete draft (created by the assistant) | draft "TEST – assistant setup (delete me)" | "yes remove the test items pls"
+stage 6 | Google Calendar connector: update event (Lena's own, this and following) | primary, "ECON2030 Econometrics seminar" from 2026-10-29: Thu 14:00–15:00, location "room 1.12" | "yes change the seminar to thursdays 14:00-15:00 room 1.12 from 29 oct"
+stage 7 | (person) Customize → Skills → toggles off | kit-setup, kit-interview, kit-connectors, kit-generate, kit-automate (kept, not deleted) | "I'll just turn the toggles off for now, not delete them. done with that, all five are off"

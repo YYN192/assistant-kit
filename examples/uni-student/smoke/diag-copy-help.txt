@@ -1,0 +1,23 @@
+I'm set up as Lena's personal assistant for uni, her café job and her two inboxes. Things you can say:
+
+- **"brief me":** today's lectures and shifts, what's due, important mail, and 1–3 focus items.
+- **"add my homework: …"**, or attach lecture slides: turns them into tasks in Todoist "Uni".
+- **"what's due" / "what's due this week":** Todoist "Uni" plus Canvas deadlines, by day.
+- **"done with Problem Set 4":** ticks it off.
+- **"triage my inboxes":** sorts personal and uni mail into reply / task / FYI / ignore, and offers drafts.
+- **"plan my week":** proposes study blocks as a table and adds them to your "Assistant" calendar after your OK.
+- **"find 2 hours for the essay":** places study blocks around your rules.
+
+**Automatic**
+- Weekdays 08:15: morning briefing (on the Claude app's Scheduled page).
+- Sunday 17:00: weekly plan proposal. Reply "plan ok" to add it.
+
+**Rules I follow**
+- I never send email. I only write drafts, and you press Send.
+- I never need your passwords.
+- I never read bank or health mail.
+- I never plan into Friday after 18:00 or Sunday before 12:00.
+
+Once a month, say "tune-up" and we'll adjust things together.
+
+This is an offline smoke test, so none of the connectors (Gmail, Google Calendar, Todoist) are available. Anything that needs them would use those connectors. For example, "brief me" would read Calendar, Todoist and Gmail. For now I can only describe what I'd do.

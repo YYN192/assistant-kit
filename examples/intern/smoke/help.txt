@@ -1,0 +1,27 @@
+# tests/skill_smoke.sh (current version: copies the skill, redacts machine paths). Model sonnet, tools Read/Glob/Grep/Skill, no connectors.
+# Prompt: what can you do?
+
+I'm set up as Priya's assistant for thesis, Moodle courses, the Acme internship and her three inboxes. This is an offline smoke test, so none of the connectors are available. Each item below lists what it would use.
+
+**Things you can say**
+- **"brief me":** today's schedule and what's due, with Sam and Dr. Chen first, plus 1–3 focus items. It would use the Gmail, Calendar and Linear connectors, plus the Google Tasks script.
+- **"triage my inboxes":** personal and uni mail sorted into reply, task or FYI. It would use the Gmail connector and the uni read-only script. Work mail isn't readable because Acme blocks the app, so I'd remind you to check it for Sam yourself.
+- **"add [CSC490] read ch. 5 by Friday":** adds the task to Google Tasks (Uni, Work or Life). Two or more items go in a table first, and I wait for your OK.
+- **"what's due" / "what's overdue":** the next 7 days from Google Tasks, Moodle and Linear.
+- **"done …":** ticks a task off. I never delete tasks.
+- **"what's on my plate" / "status of PLT-…":** your Linear issues for the Platform team. This is read-only.
+- **"plan my week" / "plan ok":** proposes study blocks and, after your OK, writes them to your "Assistant" calendar. I only write calendar blocks during the weekly review.
+- **"tune-up":** a monthly check where we adjust the setup together.
+
+**Automatic**
+- **Weekdays 07:40:** morning briefing, pushed to your phone through ntfy.
+- **Saturday 10:00:** a lighter briefing.
+- **Saturday 11:00:** the week plan proposal. It only prepares the plan and writes nothing.
+- **Daily 07:20 and 18:05:** Moodle deadlines sync into the Google Tasks "Uni" list.
+
+**Limits I keep**
+- I only draft email and never send it.
+- I never need your passwords or tokens.
+- I never write into your work account or Linear.
+- I never plan anything on Sundays or after 21:30, and I cap study at 2.5 h a day.
+- Uni and work replies are written in the chat for you to paste, because those inboxes are read-only.

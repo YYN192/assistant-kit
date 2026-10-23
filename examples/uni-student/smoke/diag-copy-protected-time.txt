@@ -1,0 +1,20 @@
+I haven't booked anything. Friday 19:00–21:00 is in your protected time (Friday after 18:00), so I won't place a study block there.
+
+I couldn't check your calendar because no Google Calendar connector is available in this offline test. Once it's connected, I would read your primary and Assistant calendars for Fri 23 Oct and the weekend. The slots below are therefore unchecked against your lectures and café shifts.
+
+**Nearest allowed options (a question, not a booking):**
+
+| # | Day | Time | Title | Calendar |
+|---|---|---|---|---|
+| 1 | Fri 23 Oct | 15:30–16:35 | ◆ ECON2050 essay plan (1/2) | Assistant |
+| 2 | Fri 23 Oct | 16:45–17:50 | ◆ ECON2050 essay plan (2/2) | Assistant |
+
+- Blocks are capped at 90 minutes with 10-minute breaks, and Friday has to finish by 18:00. Two blocks of about 65 minutes, 10 minutes apart, fit the 2 hours that way.
+- **Alternative:** Sun 25 Oct from 13:00 (Sunday before 12:00 is protected). Two blocks of 60 minutes each, 13:00–14:00 and 14:10–15:10.
+- **Alternative:** Sat 24 Oct afternoon, after your café shift and its 15-minute buffer.
+
+**Suggested split for the 2 hours:**
+1. Block 1: pin down the question and thesis, then list 3–4 main arguments and the evidence for each.
+2. Block 2: draft the section outline with sources and word counts, then note any gaps to read up on.
+
+Which option do you want? Once you pick, I'll check it against your calendar. Then I'll show you the final table and create the events in "Assistant" after your OK.

@@ -1,0 +1,33 @@
+{
+  "name": "priya-assistant",
+  "timezone": "America/Toronto",
+  "quiet_hours": "22:00-07:30",
+  "secrets_dir": "~/.config/priya-assistant",
+  "inboxes": {
+    "uni": {
+      "domain": "uni.example.edu"
+    }
+  },
+  "tasks": {
+    "default_list": "Uni"
+  },
+  "feed_to_tasks": {
+    "list": "Uni",
+    "match": [
+      "due",
+      "quiz",
+      "exam",
+      "test",
+      "deadline",
+      "registration"
+    ]
+  },
+  "gather": {
+    "feeds_days": 7,
+    "readonly_inboxes": [
+      "uni"
+    ],
+    "inbox_query": "-category:promotions -category:social -from:noreply@moodle.uni.example.edu",
+    "inbox_max": 15
+  }
+}

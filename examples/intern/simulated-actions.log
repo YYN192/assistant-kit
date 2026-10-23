@@ -1,0 +1,43 @@
+# stage | tool or command | arguments | confirmed by the person? quote
+0 | surface detection (echo "$CLAUDECODE"; uname -s; echo $HOME; ls ~/.claude) | simulated result: CLAUDECODE=1, Darwin, /Users/<persona>, ~/.claude/ exists -> claude-code | n/a (read-only)
+1 | mkdir -p ~/assistant/setup && git -C ~/assistant init | system folder (represented by examples/intern/home/); local repo, never pushed | yes: "~/assistant is fine."
+1 | write ~/assistant/setup/assistant-setup.md | Progress + Profile (represented by examples/intern/home/setup/assistant-setup.md) | yes (implied by choosing ~/assistant)
+2 | Gmail connector: search newer_than:2d max 3 (read-only) | fixture gmail_home -> 2 msgs, newest Rogers "Your bill is ready" | n/a (read-only test)
+2 | Google Calendar connector: list calendars; list events today+tomorrow (read-only) | fixture -> primary empty; shared work calendar: 09:30 Platform stand-up, 13:00 1:1 Sam | n/a (read-only test)
+2 | (person) Linear connector added in Customize -> Connectors | done by Priya | "A done, Linear is connected"
+2 | (person) work Google Calendar shared with personal account, "See all event details" | done by Priya | "it went through, no error"
+2 | Linear connector: list issues assigned to me, first 5 (read-only) | fixture linear_assigned -> PLT-88, PLT-91 | n/a (read-only test)
+4 | record approval in setup file | approved: 2026-10-22 | yes: "approve"
+5 | write ~/assistant/skill/priya-assistant/{SKILL.md,SYSTEM.md,workflows/*.md} | hub skill, 7 workflows (examples/intern/home/skill/priya-assistant/) | yes: plan "approve"
+5 | cp kit-automate/assets/scripts/*.py, run_job.sh, requirements.txt, gitignore -> ~/assistant/{scripts/,requirements.txt,.gitignore}; write ~/assistant/assistant.json | (examples/intern/home/) | yes: plan "approve"
+5 | python3 -m venv ~/assistant/.venv && ~/assistant/.venv/bin/pip install -r ~/assistant/requirements.txt | NOT RUN in this test (runner rule: no venv); Python packages in the system's own venv are allowed by rule 10 | told in message 07, "yes to all 5"
+5 | ln -s ~/assistant/skill/priya-assistant ~/.claude/skills/priya-assistant | simulated as examples/intern/sim-claude-skills/priya-assistant -> ../home/skill/priya-assistant (relative symlink) | yes: "yes to all 5"
+5 | Desktop scheduled task create: priya-briefing | weekdays 07:40, folder ~/assistant, prompt = home/automations/priya-briefing/SKILL.md; would be stored at ~/.claude/scheduled-tasks/priya-briefing/SKILL.md | yes: "yes to all 5"
+5 | Desktop scheduled task create: priya-briefing-saturday | Saturday 10:00, folder ~/assistant, prompt = home/automations/priya-briefing-saturday/SKILL.md | yes: "yes to all 5"
+5 | Desktop scheduled task create: priya-weekly-review | Saturday 11:00, folder ~/assistant, prompt = home/automations/priya-weekly-review/SKILL.md | yes: "yes to all 5"
+5 | cp home/automations/com.priya-assistant.moodle-sync.plist ~/Library/LaunchAgents/ (not loaded until the feed and Tasks sign-in work) | daily 07:20 + 18:05 | yes: "yes to all 5"
+5 | (person) Google Cloud project + OAuth Desktop client; client JSON moved to ~/.config/priya-assistant/ | done by Priya in her browser/Terminal; runner never saw the file | "finished the Google Cloud part"
+5 | (person) gmail_readonly.py auth --account uni --expect-domain uni.example.edu | in Priya's own Terminal | "uni: done"
+5 | (person) gmail_readonly.py auth --account work --expect-domain acme.example.com | FAILED: fixture script_gmail_readonly_work -> "Access blocked: Acme Example Corp has blocked this app (admin_policy_enforced)" | "work: it says this app is blocked by your organisation"
+5 | (person) gtasks.py auth; ics_feed.py add moodle; notify.py setup (ntfy) | in Priya's own Terminal, hidden input | "gtasks: done", "moodle: saved", "ntfy: setup done"
+5 | gmail_readonly.py check --account uni; list --account uni --days 2 --max 3 (read-only) | fixture -> domain uni.example.edu; 3 msgs (Dr. Alan Chen, Moodle, Registrar) | n/a (read-only)
+5 | gtasks.py check; gtasks.py lists; list --list Uni/Work/Life (read-only) | fixture -> 3 lists; Uni: "CSC490 A2 corrections" due 2026-10-21; Life: "renew transit pass" due 2026-10-31 | n/a (read-only)
+5 | ics_feed.py list; feed_to_tasks.py sync --dry-run (read-only) | fixture moodle.ics -> 3 items (real dry run saved in smoke/scripts.txt) | n/a (dry run)
+5 | edit SYSTEM.md, assistant.json, workflows briefing/inbox-triage: work mail marked not readable; gather.readonly_inboxes=["uni"] | fallback from the approved plan | plan said "if Acme blocks it: left out"; Priya: "Fine to leave it out for now?"
+6 | (person) created Google Calendar "Assistant" in the personal account | done by Priya | "I created the "Assistant" calendar"
+6 | gtasks.py add "TEST – assistant setup (delete me)" --list Life | simulated result: "+ TEST – assistant setup (delete me)"; gtasks.py list --list Life shows it | yes: "yes to all 6"
+6 | Google Calendar connector: create_event | calendar "Assistant", "TEST – assistant setup (delete me)", 2026-10-22 21:00–21:15 America/Toronto; list events confirms it | yes: "yes to all 6"
+6 | Gmail connector: create_draft | to Priya's own personal address, subject "TEST – assistant setup (delete me)", not sent; list drafts confirms it | yes: "yes to all 6"
+6 | notify.py test | ntfy push "✅ test from your assistant" (simulated "notify: sent to ntfy.") | yes: "yes to all 6"
+6 | feed_to_tasks.py sync | adds to Google Tasks "Uni": "[moodle] CSC473 Quiz 4 opens" 2026-10-28, "[moodle] CSC490 Assignment 3 is due" 2026-11-04, "[moodle] Thesis showcase registration" 2026-11-15 (table shown first, rule 6) | yes: "yes to all 6"
+6 | launchctl bootstrap gui/$(id -u) ~/Library/LaunchAgents/com.priya-assistant.moodle-sync.plist; launchctl kickstart -k gui/$(id -u)/com.priya-assistant.moodle-sync | test run: log ~/Library/Logs/priya-assistant-moodle-sync.log shows 3 lines "= …" (no duplicates), "=== exit 0" | yes: "yes to all 6"
+6 | Desktop scheduled task "Run now": priya-briefing | briefing printed + ntfy push (before quiet hours); tools approved with "always allow" | yes: "yes to all 6"
+6 | Desktop scheduled task "Run now": priya-briefing-saturday | light briefing printed + ntfy push | yes: "yes to all 6"
+6 | Desktop scheduled task "Run now": priya-weekly-review | proposal table (7 blocks, none on Sunday, none after 21:30, ≤2.5 h/day) pushed; wrote nothing | yes: "yes to all 6"
+6 | Google Calendar connector: delete_event | only the assistant-created "TEST – assistant setup (delete me)" in "Assistant" | yes: "yes to both"
+6 | Gmail connector: delete_draft | only the assistant-created "TEST – assistant setup (delete me)" draft | yes: "yes to both"
+6 | gtasks.py done "TEST – assistant setup" --list Life | ticked done (script has no delete) | yes: "yes to both"
+5 | git -C ~/assistant add -A && git -C ~/assistant commit -m "Assistant built with assistant-kit" ; git status --ignored | local commit only, never pushed; ignored: .venv/, state/ ; secrets live in ~/.config/priya-assistant (outside the repo) | covered by plan approval (local only); no push
+7 | claude plugin list | simulated: assistant-kit@assistant-kit (enabled) + Priya's other plugins (untouched) | n/a (read-only)
+7 | claude plugin uninstall assistant-kit@assistant-kit | removes kit-setup, kit-interview, kit-connectors, kit-generate, kit-automate | yes: "yes to both"
+7 | claude plugin list; ls -l ~/.claude/skills/ | assistant-kit gone; ~/.claude/skills/priya-assistant -> ~/assistant/skill/priya-assistant still present | n/a (read-only)

@@ -1,0 +1,28 @@
+I couldn't read `SYSTEM.md` or `workflows/help.md`. Both are symlinks to a folder outside this session's allowed directories, and read access wasn't granted. The summary below comes only from the skill's own description, so it may be incomplete. Nothing here is checked against `SYSTEM.md`.
+
+**With the Lena's-assistant skill**
+- **Briefings:** "brief me" or "what's today" gives a rundown of your day. The skill also lists a weekday 08:15 scheduled run.
+- **Tasks and homework:** it can add homework or tasks, show what's due, and mark things done. You can paste lecture slides or an email for it to pull tasks from.
+- **Inbox triage:** it checks your uni and personal inboxes for anything important. Bank and health emails are only counted as "private, skipped".
+- **Weekly planning:** "plan my week" runs a weekly review. The skill also lists a Sunday 17:00 scheduled run.
+- **Calendar blocking:** "block 2 hours for…" or "find time to study" looks for slots. It avoids Friday after 18:00, Sunday before 12:00, and 23:00–08:30.
+- **Tune-up:** "tune-up" is for when something isn't working, or as a monthly check.
+
+**Rules the skill follows**
+- Email is drafts only. I never send, forward, or answer invites.
+- Everything is read-only unless a workflow names a write.
+- Anything involving two or more calendar events or tasks goes in a table first, and I wait for your OK.
+- I ask before deleting anything.
+- I never handle passwords, codes, or tokens.
+
+**Connectors:** this is an offline smoke test, so none are available. The skill would need your email, calendar, Canvas, and Todoist connectors for most of the above. In a real run I'd use them for the briefing, inbox triage, task capture, and calendar blocking.
+
+**General Claude Code abilities**
+- Read, search, and edit code.
+- Run commands.
+- Review code (`/code-review`, `/simplify`, `/security-review`).
+- Set up scheduled or recurring tasks (`/schedule`, `/loop`).
+- Configure Claude Code settings and keybindings.
+- Help build apps with the Claude API.
+
+If you want the full, accurate help text, grant read access to the `assistant-kit` folder and I'll read `help.md` and `SYSTEM.md`.

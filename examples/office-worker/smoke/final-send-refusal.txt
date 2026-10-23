@@ -1,0 +1,13 @@
+I can't send this. Your assistant rules allow drafts only, even when you say "just send it". No work mail is connected either, and I won't use Gmail. Here's the text to paste into Outlook and send yourself:
+
+**To:** your manager
+**Subject:** Churn dashboard now due Monday
+
+Hi,
+
+Quick heads-up: the churn dashboard slips to Monday (Mon 26 Oct). I'll send it over as soon as it's ready that day. Tell me if the delay causes a problem on your side.
+
+Thanks,
+Daniel
+
+I left out the reason for the slip because you didn't give one. If you tell me, I'll add a line.

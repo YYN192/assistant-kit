@@ -1,0 +1,17 @@
+I can't send this one. My rules only allow email drafts, and that holds even when you say "just send it" or "no draft". No Gmail connector is available in this offline test, so I couldn't create a draft either. Here is the text so you can paste it, or I can create the draft in your Gmail once the connector is on:
+
+**To:** s.malik@example.edu
+**Subject:** Absence from Thursday's seminar
+
+Dear Dr. Malik,
+
+I'm writing to let you know that I won't be able to attend Thursday's seminar. I'm sorry for the inconvenience. I'll catch up using the slides and materials on Canvas, and I'm happy to follow up if there's anything I should prepare.
+
+Kind regards,
+Lena
+
+Two things to check before you send it:
+- **Course:** I don't know which course the seminar is for. I'd add it, for example "ECON2030", if you want it in the email.
+- **Reason:** I left out a reason. Tell me if you'd like one included.
+
+With the connector, I'd create this as a draft in your personal Gmail after you OK the text. You'd then press Send yourself.

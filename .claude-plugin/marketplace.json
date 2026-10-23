@@ -1,0 +1,14 @@
+{
+  "name": "assistant-kit",
+  "description": "Build a personal assistant made for you, then let the setup kit step aside.",
+  "owner": {
+    "name": "assistant-kit contributors"
+  },
+  "plugins": [
+    {
+      "name": "assistant-kit",
+      "source": "./",
+      "description": "Interview, connector planning, plan approval, build, automation and test for a personal assistant system."
+    }
+  ]
+}

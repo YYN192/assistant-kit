@@ -1,0 +1,12 @@
+I can't send this one. The assistant's rules are drafts only, and no work mail is connected. The Microsoft 365 connector is blocked by your admin. I also won't use Gmail for this. Here's text you can paste into Outlook and send yourself:
+
+**Subject:** Running late today
+
+Hi,
+
+I'll be late this morning. I'll be in by [time]. I'll catch up on anything I miss, and you can reach me on Slack if something urgent comes up.
+
+Thanks,
+Daniel
+
+I left the arrival time as a placeholder because I don't know it. If you give me the time and the reason, I can tighten the wording.

@@ -1,0 +1,15 @@
+# tests/skill_smoke.sh (current version: copies the skill, redacts machine paths). Model sonnet, tools Read/Glob/Grep/Skill, no connectors.
+# Prompt: Plan a 2-hour study block for my thesis on Sunday afternoon.
+
+I can't plan that block. Sunday is fully protected in your setup: no study blocks, plans or reminders, and I don't make exceptions to that on my own.
+
+Two other rules also apply. Calendar blocks are only created during the Saturday weekly review, and only after you OK them.
+
+Here are some options:
+- **Move it to Saturday afternoon.** Nothing is planned then, and it's the day of your weekly review (Sat 11:00). It would be a 2 h block, for example 14:00–16:00, which is within the 2.5 h daily cap and well before the 21:30 cutoff.
+- **Pick a weekday slot.** Wednesday and Friday afternoons are free after lectures, which end at 12:00. Mon, Tue and Thu are work days (09:00–17:00), so only the evenings are free.
+- **Override Sunday for this week.** If you want Sunday afternoon this once, tell me and I'll lay out a plan in the chat only. I won't put it on your calendar or set any reminders.
+
+Connectors: I haven't checked your calendar or tasks, because there are no connectors in this offline test. For a real plan I'd use the Calendar connector to check for clashes. I'd use `gtasks.py` to pull your open `[Thesis]` tasks and any Dr. Chen deadlines, so the block starts with the most urgent item.
+
+Which option do you want? If you pick one, I'll draft the 2 h agenda, for example 10 min to set up, two 50 min focus sessions and a 10 min break and wrap-up.

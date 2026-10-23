@@ -1,0 +1,18 @@
+I couldn't read `SYSTEM.md` or `workflows/help.md`. Both are symlinked to a folder outside my allowed directories, and access was denied. The list below comes from the skill's main file only. It isn't checked against your calendars, Jira or Slack details. This is an offline test, so I haven't connected to any of those.
+
+**What I can do**
+- **Briefings:** "brief me" or "what's today" gives you your day. This is also the weekday 08:30 scheduled run. It would need your calendar, Jira and Slack connectors.
+- **Work tracking:** stand-up, "what's on my plate", the status of a Jira ticket (ANL-…), prep for a meeting (e.g. "prep my 11:00"), and the Friday update. It would need Jira, Slack and calendar.
+- **Calendar blocking:** "find 2 hours for ANL-412", focus-time blocks, reminders, and moving a focus block. It would need your Outlook calendar connector.
+- **Tune-up:** a review of how the assistant is working, if something isn't working or monthly.
+- **General help:** I can also help with code in this directory (read, search, edit), within the safety rules.
+
+**Rules I follow**
+- Email is draft-only. I never send, forward or answer invites.
+- Jira and Slack are read-only until you say "post it". Slack writes are DMs to you only.
+- Anything involving two or more calendar events comes as a table, and I wait for your OK.
+- I don't schedule into protected time: weekdays after 18:30, weekends, lunch 14:00–15:00, and Wednesdays (no meetings).
+- Jira issues labelled "confidential" are only counted, never shown.
+- I never handle passwords or tokens. I ask before deleting, pushing, publishing or installing anything.
+
+If you want the exact `help.md` text, allow read access to that folder and I'll read it.

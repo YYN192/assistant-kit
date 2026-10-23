@@ -1,0 +1,19 @@
+$ python3 skills/kit-generate/scripts/package_skill.py examples/intern/home/skill/priya-assistant --personal --zip <temp dir>
+✓ priya-assistant: valid
+  zip: <temp>/priya-assistant.zip
+exit 0
+# zip contents:
+Archive:  <temp>/priya-assistant.zip
+  Length      Date    Time    Name
+---------  ---------- -----   ----
+     3493  01-01-1980 00:00   priya-assistant/SKILL.md
+    14502  01-01-1980 00:00   priya-assistant/SYSTEM.md
+     4339  01-01-1980 00:00   priya-assistant/workflows/briefing.md
+     1097  01-01-1980 00:00   priya-assistant/workflows/help.md
+     2975  01-01-1980 00:00   priya-assistant/workflows/inbox-triage.md
+     2794  01-01-1980 00:00   priya-assistant/workflows/task-capture.md
+     1984  01-01-1980 00:00   priya-assistant/workflows/tune-up.md
+     2622  01-01-1980 00:00   priya-assistant/workflows/weekly-review.md
+     1206  01-01-1980 00:00   priya-assistant/workflows/work-tracker.md
+---------                     -------
+    35012                     9 files

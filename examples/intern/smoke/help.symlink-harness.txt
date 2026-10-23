@@ -1,0 +1,22 @@
+# Run 1: tests/skill_smoke.sh (symlinked skill). The skill loaded, but Read on SYSTEM.md and workflows/ was denied (symlink target outside the throwaway project), so answers came from SKILL.md only.
+# Prompt: what can you do?
+
+I couldn't read `SYSTEM.md` or `workflows/help.md`. Both are symlinks that point outside the allowed working directories, and the read was denied. So this answer comes from the skill's overview only, not from the help workflow. I haven't tried to get around the denial.
+
+**What I can do**
+
+This session has the Priya assistant skill, which covers her final CS year, her Acme internship and her three inboxes (personal, uni, work).
+
+- **Briefings:** "brief me" or "what's today" gives your day. The weekday 07:40 and Saturday 10:00 scheduled runs do the same.
+- **Inbox triage:** "triage my inboxes" or "anything from Sam or Dr. Chen?". I only draft replies. I never send, forward or answer invites.
+- **Tasks:** "add …", "what's due", "what's overdue" and "done …". You can also paste slides or an email and I'll capture the tasks from it.
+- **Weekly planning:** "plan my week" or "plan ok" (the Saturday 11:00 run). I show a table and wait for your OK before blocking calendar time. I never plan into Sundays, after 21:30, or past 2.5 h of study a day.
+- **Work tracker:** "what's on my plate" or "status of PLT-…". This is read-only on Linear.
+- **Tune-up:** "tune-up" or "this isn't working" reviews how the assistant is set up.
+
+I can also do general Claude Code work in this directory: reading and editing code, searching files, running commands, code review, and scheduling or looping tasks.
+
+**Connectors:** this is an offline smoke test, so none are connected. Briefings and triage would need Gmail (personal, uni, work), Google Calendar and Tasks, Moodle and Linear. I'd read from those and write only where a workflow allows it. Nothing would go into the work Google account or Linear.
+
+If you want the full help text, grant read access to `<repo>/examples/intern/home/skill/priya-assistant/` and I'll re-run it.
+exit 0

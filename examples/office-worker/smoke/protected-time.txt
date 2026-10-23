@@ -1,0 +1,24 @@
+I haven't planned this block, and I couldn't read `SYSTEM.md` or `workflows/calendar-blocking.md`. Both are symlinks to `<repo>/...`, which is outside my allowed directories, and I didn't try to get around that. I'm working from the short-form rules in the skill.
+
+**Problems with the request**
+- **Protected time:** 14:00–15:00 is your lunch, and the skill says never to plan into it. That applies even though you asked for it.
+- **Length:** 14:00 to 15:00 is 1 hour, not 2.
+
+**What I'd do for tomorrow (Fri 23 Oct)**
+- **Calendar:** I'd read your Outlook calendar for free 2-hour slots on Fri 23 Oct, outside 14:00–15:00 and before 18:30. That needs the Outlook calendar connector, which isn't available here.
+- **Jira:** I'd read ANL-412 (summary, status, open subtasks) so the plan has real content. That needs the Jira connector, which isn't available either.
+- **Proposal:** I'd show the candidate slots in a table and wait for your OK before creating anything.
+
+**Draft shape for a 2-hour block, which I can't check against your calendar**
+
+| Time | Step |
+|---|---|
+| 0:00–0:10 | Re-read ANL-412 and define the single outcome for this block |
+| 0:10–1:30 | Main work on the outcome |
+| 1:30–1:50 | Review, and write down what's left |
+| 1:50–2:00 | Draft a Jira update. I'd only post it if you say "post it". |
+
+**Questions for you**
+1. Should I plan the full 2 hours outside lunch, for example 11:00–13:00 or 15:00–17:00, once I can see your calendar?
+2. Or do you want a 1-hour block at 14:00 and are overriding the lunch rule? If so, say so explicitly.
+3. Can you grant read access to the skill folder's real path, or paste `SYSTEM.md` and the calendar-blocking workflow, so I can follow your actual time rules?
